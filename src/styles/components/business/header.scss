@@ -1,0 +1,20 @@
+.header {
+	padding: 50px 0;
+	position: absolute;
+	top: 0;
+	background-color: transparent;
+	z-index: 1;
+	width: 100%;
+
+	&__nav {
+		width: 100%;
+		display: flex;
+		gap: 40px;
+		justify-content: center;
+
+		.link {
+			color: $white;
+		}
+	}
+}
+

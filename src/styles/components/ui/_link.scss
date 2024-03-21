@@ -1,0 +1,11 @@
+.link {
+	width: fit-content;
+	@include regular-16-uppercase;
+	@include transition;
+	color: $black;
+
+	&:hover {
+		color: $green;
+	}
+}
+

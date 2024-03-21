@@ -1,0 +1,49 @@
+.education {
+	&__content {
+		display: flex;
+		gap: 50px;
+		align-items: center;
+	}
+
+	&__text {
+		max-width: 50%;
+	}
+
+	&__swiper {
+		max-width: 50%;
+
+		img {
+			filter: brightness(80%);
+		}
+
+		.swiper-wrapper {
+			padding-bottom: 50px;
+		}
+
+		.swiper-slide {
+			height: 300px;
+		}
+
+		.swiper-pagination {
+			bottom: 13px;
+		}
+		.swiper-pagination-bullet-active {
+			background-color: $light-green;
+		}
+
+		.swiper-button-next,
+		.swiper-button-prev {
+			color: $light-green;
+		}
+
+		.swiper-button-prev,
+		.swiper-button-next {
+			top: unset;
+			bottom: 0;
+			&:after {
+				font-size: 22px;
+			}
+		}
+	}
+}
+

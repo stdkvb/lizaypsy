@@ -1,0 +1,21 @@
+@import 'base/breakpoints';
+@import 'base/fonts';
+@import 'base/vars';
+@import 'base/mixins';
+@import 'base/basic';
+@import 'base/animation';
+
+@import 'components/ui/button';
+@import 'components/ui/link';
+@import 'components/ui/accordion';
+@import 'components/ui/modal';
+
+@import 'components/business/header';
+@import 'components/business/welcome';
+@import 'components/business/about-me';
+@import 'components/business/numbers.scss';
+@import 'components/business/education.scss';
+@import 'components/business/requests.scss';
+@import 'components/business/price.scss';
+@import 'components/business/contacts.scss';
+
