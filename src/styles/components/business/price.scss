@@ -11,7 +11,7 @@
 		position: relative;
 		overflow: hidden;
 		min-height: 280px;
-		max-width: 270px;
+		max-width: 243px;
 
 		img,
 		picture {
@@ -41,12 +41,13 @@
 		height: 100%;
 		padding-top: 80px;
 		width: 100%;
+		background: linear-gradient(0deg, rgb(151, 174, 119) 0%, rgba(0, 0, 0, 0) 60%);
 
 		h3 {
 			font-size: 16px;
 			color: $white;
 			margin: 0 20px;
-			max-width: 70%;
+			max-width: 80%;
 		}
 
 		div {
