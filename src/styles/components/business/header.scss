@@ -6,14 +6,48 @@
 	z-index: 1;
 	width: 100%;
 
+	@include tablet {
+		display: flex;
+		justify-content: flex-end;
+		padding-top: 30px;
+		padding-bottom: 30px;
+	}
+
 	&__nav {
 		width: 100%;
 		display: flex;
-		gap: 40px;
+		gap: 35px;
 		justify-content: center;
+		@include transition;
+
+		@include tablet {
+			// display: none;
+			opacity: 0;
+			flex-direction: column;
+
+			&.active {
+				opacity: 1;
+			}
+		}
 
 		.link {
 			color: $white;
+		}
+	}
+
+	&__burger {
+		background-image: url(@icons/burger.svg);
+		width: 30px;
+		height: 30px;
+		cursor: pointer;
+		background-position: center;
+
+		&.active {
+			background-image: url(@icons/close.svg);
+		}
+
+		@include min_tablet {
+			display: none;
 		}
 	}
 }

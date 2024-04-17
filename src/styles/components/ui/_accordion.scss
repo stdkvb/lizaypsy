@@ -2,15 +2,16 @@
 	display: flex;
 	flex-direction: column;
 	position: relative;
+	list-style: none;
 
 	.accordion__item {
 		.accordion__toggle {
 			cursor: pointer;
 			display: flex;
-			justify-content: space-between;
 			align-items: center;
 			position: relative;
 			gap: 20px;
+			@include transition;
 
 			&::after {
 				content: '';
@@ -23,11 +24,15 @@
 					display: none;
 				}
 			}
+
+			&:hover {
+				text-decoration: underline;
+			}
 		}
 
 		.accordion-icon {
 			@include transition;
-			background-image: url(@icons/plus.svg);
+			background-image: url(@icons/chevron.svg);
 			background-repeat: no-repeat;
 			width: 23px;
 			height: 23px;
@@ -35,10 +40,7 @@
 			border: none;
 			background-position: center;
 			transition: $transitionDuration;
-
-			@include min_tablet {
-				display: none;
-			}
+			background-size: 100%;
 		}
 
 		.accordion__content {
@@ -51,10 +53,16 @@
 			flex-direction: column;
 			gap: 10px;
 			opacity: 0;
+
 			@include transition;
 
 			@include tablet {
 				margin-top: 30px;
+			}
+
+			p {
+				text-align: justify;
+				line-height: 160%;
 			}
 		}
 
@@ -64,10 +72,11 @@
 				opacity: 1;
 				max-height: 1000px;
 				padding-bottom: 30px;
+				padding-top: 20px;
 			}
 
 			.accordion-icon {
-				background-image: url(@icons/minus.svg) !important;
+				transform: rotate(180deg);
 			}
 
 			.accordion__toggle::after {

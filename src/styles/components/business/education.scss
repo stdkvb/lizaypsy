@@ -17,15 +17,20 @@
 		max-width: 50%;
 
 		img {
-			filter: brightness(80%);
+			filter: brightness(90%);
+			max-height: 500px;
+			object-fit: contain;
 		}
 
 		.swiper-wrapper {
 			padding-bottom: 50px;
+			align-items: center;
 		}
 
 		.swiper-slide {
-			height: 300px;
+			display: flex;
+			justify-content: center;
+			overflow: hidden;
 		}
 
 		.swiper-pagination {

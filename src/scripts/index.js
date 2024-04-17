@@ -5,7 +5,7 @@ import takeControlAccordion from './accordion'
 import modalController from './modal'
 
 // selectController()
-// menuController()
+menuController()
 // takeControlCookie('.cookie', '.cookie__accept')
 modalController()
 
@@ -30,5 +30,16 @@ takeControlAccordion('.enumeration', '.accordion__list', {
 	accordionItemTogglerSelector: '.accordion__toggle',
 	accordionItemContentSelector: '.accordion__content',
 	accordionItemActiveClass: 'accordion__item_active'
+})
+
+//easyweek button
+
+document.addEventListener('scroll', () => {
+	const position = document.querySelector('html').scrollTop
+	if (position > 50) {
+		document.querySelector('.EWBookingWidgetTrigger').style.opacity = '1'
+	} else if (position < 50) {
+		document.querySelector('.EWBookingWidgetTrigger').style.opacity = '0'
+	}
 })
 
