@@ -1,4 +1,9 @@
 .about-me {
+	padding-bottom: 50px;
+	@include mobile {
+		padding-bottom: 25px;
+	}
+
 	&__content {
 		display: flex;
 		gap: 20px;

@@ -1,8 +1,14 @@
 .price {
+	padding-bottom: 0 !important;
+
 	&__items {
 		display: flex;
 		gap: 20px;
 		justify-content: center;
+
+		@include mobile {
+			flex-direction: column;
+		}
 	}
 
 	&__item {
@@ -12,6 +18,11 @@
 		overflow: hidden;
 		min-height: 280px;
 		max-width: 243px;
+
+		@include mobile {
+			width: 100%;
+			max-width: unset;
+		}
 
 		img,
 		picture {

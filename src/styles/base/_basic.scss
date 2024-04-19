@@ -97,7 +97,11 @@ img {
 
 .section {
 	background-color: $grey;
-	padding: 50px 0;
+	padding-top: 50px;
+
+	@include tablet {
+		padding-top: 25px;
+	}
 
 	p {
 		color: $light-green;
@@ -123,11 +127,19 @@ h2 {
 		width: 100%;
 		border-bottom: solid 2px $light-green;
 	}
+
+	@include tablet {
+		@include regular-20-uppercase;
+	}
 }
 
 h3 {
 	color: $light-green;
 	text-transform: uppercase;
+
+	@include mobile {
+		@include regular-14-uppercase;
+	}
 }
 
 ul {
@@ -135,11 +147,19 @@ ul {
 	list-style: disc;
 	text-transform: uppercase;
 
+	@include mobile {
+		padding-left: 15px;
+	}
+
 	li {
 		margin-left: 15px;
 		text-transform: none;
 		margin-bottom: 10px;
 		@include regular-14;
+
+		@include mobile {
+			margin-left: 0;
+		}
 	}
 }
 
@@ -173,6 +193,12 @@ ol {
 			background-position: center;
 			align-content: center;
 			background-color: $light-green;
+
+			@include mobile {
+				height: 30px;
+				min-width: 20px;
+				left: 4px;
+			}
 		}
 	}
 
@@ -188,3 +214,4 @@ ol {
 .EWBookingWidgetTrigger {
 	@include transition;
 }
+

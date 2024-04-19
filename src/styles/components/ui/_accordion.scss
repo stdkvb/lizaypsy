@@ -28,6 +28,10 @@
 			&:hover {
 				text-decoration: underline;
 			}
+
+			@include mobile {
+				gap: 10px;
+			}
 		}
 
 		.accordion-icon {
@@ -41,6 +45,13 @@
 			background-position: center;
 			transition: $transitionDuration;
 			background-size: 100%;
+
+			@include mobile {
+				width: 17px;
+				height: 17px;
+				min-width: 17px;
+				min-height: 17px;
+			}
 		}
 
 		.accordion__content {
@@ -53,16 +64,15 @@
 			flex-direction: column;
 			gap: 10px;
 			opacity: 0;
-
 			@include transition;
-
-			@include tablet {
-				margin-top: 30px;
-			}
 
 			p {
 				text-align: justify;
 				line-height: 160%;
+
+				@include mobile {
+					text-align: left;
+				}
 			}
 		}
 
@@ -73,6 +83,12 @@
 				max-height: 1000px;
 				padding-bottom: 30px;
 				padding-top: 20px;
+
+				@include mobile {
+					padding-bottom: 15px;
+					padding-top: 15px;
+					gap: 0;
+				}
 			}
 
 			.accordion-icon {
