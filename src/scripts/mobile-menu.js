@@ -4,16 +4,15 @@ const menuController = function () {
 	burger.addEventListener('click', () => {
 		menu.classList.toggle('active')
 		burger.classList.toggle('active')
-		document.body.style.overflow = 'hidden'
+		// document.body.classList.toggle('lock')
 	})
 
 	const links = menu.querySelectorAll('.link')
-	console.log(links)
 	links.forEach((element) => {
 		element.addEventListener('click', () => {
 			menu.classList.toggle('active')
 			burger.classList.toggle('active')
-			document.body.style.overflow = 'unset'
+			// document.body.classList.toggle('lock')
 		})
 	})
 }

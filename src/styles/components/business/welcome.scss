@@ -17,9 +17,13 @@
 		top: 0;
 		left: 0;
 		z-index: -1;
-		// background-image: url(@images/photo_3.jpg);
+		background-image: url(@images/photo_3.jpg);
 		background-size: cover;
 		background-position: right;
+
+		@include mobile {
+			background-position: 85% center;
+		}
 	}
 
 	&__rectangle {
@@ -35,6 +39,11 @@
 		h1 {
 			text-align: center;
 		}
+
+		@include mobile {
+			margin-top: 130px;
+			padding-bottom: 15px;
+		}
 	}
 
 	p {
@@ -42,6 +51,15 @@
 		color: $cream;
 		@include regular-36-uppercase;
 		text-align: center;
+
+		@include tablet {
+			@include regular-30-uppercase;
+		}
+
+		@include mobile {
+			margin-top: 15px;
+			@include regular-25-uppercase;
+		}
 	}
 
 	.button {

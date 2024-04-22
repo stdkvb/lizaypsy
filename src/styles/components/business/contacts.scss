@@ -1,5 +1,10 @@
 .contacts {
 	background-color: $light-green;
+	padding-bottom: 60px;
+
+	@include tablet {
+		padding-bottom: 25px;
+	}
 
 	h2 {
 		color: $white;
@@ -19,8 +24,9 @@
 		display: flex;
 		justify-content: space-between;
 		gap: 15px;
+		width: 74%;
 
-		@include mobile {
+		@include tablet {
 			flex-direction: column;
 		}
 	}

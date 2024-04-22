@@ -34,15 +34,20 @@
 		border-radius: 30px;
 
 		@include mobile {
-			width: 100%;
 			top: 0;
 			right: 0;
+			max-width: 90%;
+			padding: 25px 20px;
 		}
 
 		h4 {
 			color: $white;
 			text-align: center;
 			@include regular-22-uppercase;
+
+			@include mobile {
+				@include regular-17-uppercase;
+			}
 		}
 	}
 
@@ -63,6 +68,11 @@
 		&:hover {
 			cursor: pointer;
 			scale: 1.05;
+		}
+
+		@include mobile {
+			top: -43px;
+			right: 0px;
 		}
 	}
 

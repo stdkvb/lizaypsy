@@ -21,6 +21,10 @@ body {
 	background-color: $grey;
 	max-height: 100vh;
 	overflow-y: scroll;
+
+	&.lock {
+		overflow: hidden;
+	}
 }
 
 main {
@@ -111,6 +115,14 @@ img {
 h1 {
 	color: $cream;
 	@include regular-48-uppercase;
+
+	@include tablet {
+		@include regular-36-uppercase;
+	}
+
+	@include mobile {
+		@include regular-30-uppercase;
+	}
 }
 
 h2 {
@@ -213,5 +225,52 @@ ol {
 
 .EWBookingWidgetTrigger {
 	@include transition;
+	opacity: 0;
+	pointer-events: none;
+
+	&.active {
+		opacity: 1;
+		pointer-events: unset;
+	}
+
+	@include mobile {
+		bottom: 30px !important;
+		right: 34px !important;
+		flex-direction: column-reverse !important;
+		align-items: center !important;
+	}
+}
+
+.EWBookingWidgetTrigger__icon {
+	@include mobile {
+		position: absolute;
+		top: -90px;
+		left: 26px;
+	}
+}
+
+#fullpage {
+	display: none;
+	position: fixed;
+	z-index: 10000;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+
+	backdrop-filter: blur(10px);
+	justify-content: center;
+	align-items: center;
+}
+
+.fullpage__wrapper {
+	width: 100%;
+	height: 100%;
+	max-width: 80vw;
+	max-height: 80vh;
+	background-size: contain;
+	background-repeat: no-repeat no-repeat;
+	background-position: center center;
+	position: relative;
 }
 

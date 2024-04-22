@@ -10,6 +10,14 @@
 
 		div {
 			width: 50%;
+
+			@include mobile {
+				width: unset;
+			}
+		}
+
+		@include mobile {
+			flex-direction: column;
 		}
 	}
 }

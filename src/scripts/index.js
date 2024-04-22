@@ -21,6 +21,9 @@ const educationSwiper = new Swiper('.education__swiper', {
 	navigation: {
 		nextEl: '.swiper-button-next',
 		prevEl: '.swiper-button-prev'
+	},
+	autoplay: {
+		delay: 5000
 	}
 })
 
@@ -33,13 +36,24 @@ takeControlAccordion('.enumeration', '.accordion__list', {
 })
 
 //easyweek button
-
 document.addEventListener('scroll', () => {
 	const position = document.querySelector('html').scrollTop
 	if (position > 50) {
-		document.querySelector('.EWBookingWidgetTrigger').style.opacity = '1'
+		document.querySelector('.EWBookingWidgetTrigger').classList.add('active')
 	} else if (position < 50) {
-		document.querySelector('.EWBookingWidgetTrigger').style.opacity = '0'
+		document.querySelector('.EWBookingWidgetTrigger').classList.remove('active')
 	}
+})
+
+//fullpage image viewer
+const imgs = document.querySelectorAll('.education__swiper  img')
+const fullPage = document.querySelector('#fullpage')
+
+imgs.forEach((img) => {
+	img.addEventListener('click', function () {
+		fullPage.querySelector('.fullpage__wrapper').style.backgroundImage = 'url(' + img.src + ')'
+		fullPage.style.display = 'flex'
+		document.body.style.overflow = 'hidden'
+	})
 })
 

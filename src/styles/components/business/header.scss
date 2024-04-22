@@ -32,6 +32,25 @@
 
 		.link {
 			color: $white;
+			position: relative;
+
+			&:hover {
+				color: $light-green;
+				&::after {
+					width: 100%;
+				}
+			}
+
+			&::after {
+				content: '';
+				position: absolute;
+				bottom: -2px;
+				left: 0;
+				width: 0;
+				height: 1px;
+				background-color: $light-green;
+				@include transition;
+			}
 		}
 	}
 

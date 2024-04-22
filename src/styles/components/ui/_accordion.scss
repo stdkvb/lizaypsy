@@ -6,6 +6,7 @@
 
 	.accordion__item {
 		.accordion__toggle {
+			width: fit-content;
 			cursor: pointer;
 			display: flex;
 			align-items: center;
@@ -13,20 +14,24 @@
 			gap: 20px;
 			@include transition;
 
-			&::after {
+			h3 {
+				position: relative;
+			}
+			h3::after {
 				content: '';
-				width: 100%;
 				position: absolute;
-				bottom: -15px;
+				bottom: -2px;
+				left: 0;
+				width: 0;
+				height: 1px;
+				background-color: $light-green;
 				@include transition;
-
-				@include min_tablet {
-					display: none;
-				}
 			}
 
 			&:hover {
-				text-decoration: underline;
+				h3::after {
+					width: 100%;
+				}
 			}
 
 			@include mobile {
