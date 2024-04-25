@@ -3,8 +3,10 @@
 	flex-direction: column;
 	position: relative;
 	list-style: none;
+	padding-left: 0;
 
 	.accordion__item {
+		margin-bottom: 15px;
 		.accordion__toggle {
 			width: fit-content;
 			cursor: pointer;

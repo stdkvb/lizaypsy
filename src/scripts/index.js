@@ -1,15 +1,9 @@
-import selectController from './select'
 import menuController from './mobile-menu'
-import takeControlCookie from './cookie'
 import takeControlAccordion from './accordion'
 import modalController from './modal'
 
-// selectController()
 menuController()
-// takeControlCookie('.cookie', '.cookie__accept')
 modalController()
-
-// var rellax = new Rellax('.rellax')
 
 // swiper init
 const educationSwiper = new Swiper('.education__swiper', {

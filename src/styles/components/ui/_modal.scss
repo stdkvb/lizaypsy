@@ -64,6 +64,7 @@
 		transition: all $transitionDuration;
 		background-image: url('@icons/close.svg');
 		background-position: center;
+		background-size: 150%;
 
 		&:hover {
 			cursor: pointer;

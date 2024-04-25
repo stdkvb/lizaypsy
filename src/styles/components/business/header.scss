@@ -55,18 +55,70 @@
 	}
 
 	&__burger {
-		background-image: url(@icons/burger.svg);
-		width: 30px;
-		height: 30px;
-		cursor: pointer;
-		background-position: center;
+		// background-image: url(@icons/burger.svg);
+		// width: 30px;
+		// height: 30px;
+		// cursor: pointer;
+		// background-position: center;
 
-		&.active {
-			background-image: url(@icons/close.svg);
+		// &.active {
+		// 	background-image: url(@icons/close.svg);
+		// }
+
+		// @include min_tablet {
+		// 	display: none;
+		// }
+		height: 20px;
+		background-color: transparent;
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		align-items: end;
+		gap: 5px;
+		display: none;
+
+		@include tablet {
+			display: flex;
+			transition: all $transitionDuration;
+
+			.children {
+				transition: all $transitionDuration;
+			}
 		}
 
-		@include min_tablet {
-			display: none;
+		.children,
+		&::before,
+		&::after {
+			display: block;
+			height: 2px;
+			background-color: $white;
+			border-radius: 10px;
+			transition: all $transitionDuration;
+		}
+
+		.children {
+			width: 14px;
+		}
+
+		&::before,
+		&::after {
+			content: '';
+			width: 20px;
+		}
+
+		&.active {
+			.children {
+				display: none;
+			}
+
+			&::before {
+				transform: translateY(4px) rotate(45deg);
+			}
+
+			&::after {
+				transform: translateY(-14px) rotate(-45deg);
+			}
 		}
 	}
 }
