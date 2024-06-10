@@ -17,7 +17,7 @@
 		top: 0;
 		left: 0;
 		z-index: -1;
-		background-image: url(@images/photo_3.jpg);
+		background-image: url(@images/photo_3.webp);
 		background-size: cover;
 		background-position: right;
 
@@ -36,8 +36,18 @@
 		justify-content: center;
 		padding-bottom: 30px;
 
-		h1 {
+		h2 {
 			text-align: center;
+			color: $cream;
+			@include regular-48-uppercase;
+
+			@include tablet {
+				@include regular-36-uppercase;
+			}
+
+			@include mobile {
+				@include regular-30-uppercase;
+			}
 		}
 
 		@include mobile {
